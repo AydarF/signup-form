@@ -1,33 +1,165 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+body {
+  margin: 0;
+}
+
+.Form {
+  position: relative;
+  height: 920px;
+  margin-top: 20px;
+}
+
+.FormGroup {
+  margin: 0 auto;
+  width: 500px;
+  padding: 20px 50px;
+  font-family: 'Noto Sans', sans-serif;
   text-align: center;
+  border: none;
+  border-radius: 2px;
+  background-color: #D6E1E8;
+  box-shadow: 0px 0px 20px -15px #000000;
+  opacity: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* Student & Tutor section */
+
+.selectPath {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.selectPath span {
+  font-size: 20px;
+  color: #314E65;
 }
 
-.App-link {
-  color: #61dafb;
+.selectPath .joinUs {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 28px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.selectPath .path {
+  text-align: right;
+  align-items: end;
 }
+
+.selectPath .path .student {
+  padding: 0 20px 0 5px;
+}
+
+.selectPath .path .tutor {
+  padding-left: 5px;
+}
+
+/* Inputs Section */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 6px;
+}
+
+.contact .full {
+  grid-column: 1 / 3;
+}
+
+.FormGroup label {
+  display: block;
+  font-size: 13px;
+  text-align: left;
+  color: #222222;
+}
+
+.FormGroup input {
+  border: none;
+  margin: 10px 0;
+}
+
+.FormGroup input[type=text], .FormGroup input[type=password] {
+  display: block;
+  width: 246.5px;
+  height: 39px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* .FormGroup input:not([type=radio]) :not([type=checkbox]) {
+  display: block;
+  width: 203px;
+  height: 39px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}  */
+
+.FormGroup .email, .FormGroup .username {
+  display: block;
+  width: 100%;
+  height: 39px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}  
+
+input::placeholder {
+  padding: 0px 10px;
+  color: #B9B9B9;
+  opacity: 0.8;
+  font-size: 15px;
+} 
+
+/* Form Links */
+
+.FormGroup a {
+  color: #0076B1;
+  text-decoration: none;
+}
+
+.FormGroup button {
+  width: 132px;
+  height: 54px;
+  border: none;
+  border-radius: 20px;
+  background-color: #314E65;
+  color: #D6E1E8;
+  font-size: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Section underneath password and confirm password inputs */
+
+.passwordHint p {
+  text-align: left;
+  font-size: 12px;
+  color: #9A9A9A;
+}
+
+/* Terms and Privacy Policy Section */
+
+.terms {
+  font-size: 15px;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: left;
+  padding-bottom: 12px;
+}
+
+.terms input {
+  margin-right: 5px;
+}
+
+.loginHint p {
+  font-size: 15px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Error Messages */
+
+input + p, .terms p {
+  margin: 0;
+  text-align: center;
+  color: red;
+}
+
+
